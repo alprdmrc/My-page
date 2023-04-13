@@ -8,9 +8,9 @@ const Hero = ({ darkMode, handleDarkMode }) => {
   const { siteData, language, toggleLanguage } = useContext(LanguageContext);
 
   return (
-    <div className="bg-silver dark:bg-darkgrey">
+    <div className="bg-silver dark:bg-darkgrey hero-section relative">
       <div className="container flex flex-wrap pb-24">
-        <div className="py-16 px-10 w-full">
+        <div className="top-bar py-16 px-10 w-full">
           <div className="justify-end flex flex-row items-center">
             <div className="flex flex-row justify-between toggle">
               <label
@@ -48,7 +48,7 @@ const Hero = ({ darkMode, handleDarkMode }) => {
         </div>
         <div className="w-3/5 dark:text-[#FFFFFF]">
           <p className="text-3xl pb-4">{siteData.intro.greeting}</p>
-          <p className="text-[2.5rem] font-medium pr-14 pb-14">
+          <p className="intro-text text-[2.5rem] font-medium pr-14 pb-14">
             {siteData.intro.intro}
           </p>
           <div className="text-3xl dark:text-dirtywhite flex gap-2 pb-5">
@@ -57,7 +57,7 @@ const Hero = ({ darkMode, handleDarkMode }) => {
           </div>
           {/* UUPS, set color of some words of jsx text with -dangerous thing- */}
           <p
-            className="pr-40"
+            className="pr-40 current-text"
             dangerouslySetInnerHTML={{
               __html: siteData.intro.current.replace(
                 /{(.*?)}/g,
@@ -66,7 +66,7 @@ const Hero = ({ darkMode, handleDarkMode }) => {
             }}
           ></p>
         </div>
-        <div className="w-2/5">
+        <div className="profile-img w-2/5">
           <img
             className="mx-auto my-12 w-[341px] h-[341px] object-cover rounded-[22px] shadow-[-20px_-20px_#E92577]"
             src={profile}

@@ -2,13 +2,126 @@
 @tailwind components;
 @tailwind utilities;
 
-#dark-toggle:checked ~ .dot {
-  transform: translateX(200%);
-}
-#dark-toggle:checked ~ .dot::before {
-  content: "";
-  width: 3px;
-  height: 3px;
-  color: black;
-  border-radius: 50%;
+@layer components {
+  .App {
+    overflow: hidden;
+  }
+
+  #dark-toggle:checked ~ .dot {
+    transform: translateX(200%);
+  }
+  #dark-toggle:checked ~ .dot::before {
+    content: "";
+    width: 3px;
+    height: 3px;
+    color: black;
+    border-radius: 50%;
+  }
+  .intro-text {
+    position: relative;
+    z-index: 1;
+  }
+  .intro-text::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 2rem;
+    width: 9.25rem;
+    background-color: #e92577;
+    border-radius: 0.25rem;
+    left: -1rem;
+    top: 2.25rem;
+    z-index: -1;
+  }
+  .top-bar {
+    position: relative;
+  }
+
+  .top-bar::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 100%;
+    @apply bg-dirtywhite dark:bg-shadow;
+    left: 30%;
+    top: -3rem;
+  }
+
+  .hero-section::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -6rem;
+    top: 32rem;
+    background-color: #ea2678;
+    width: 13.5rem;
+    height: 4rem;
+    border-radius: 2rem;
+  }
+  .profile-img {
+    position: relative;
+  }
+  .profile-img::after {
+    content: "";
+    display: block;
+    z-index: 1;
+    position: absolute;
+    background-color: transparent;
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 100%;
+    border: 1.25rem solid;
+    @apply border-dirtywhite dark:border-shadow;
+    right: calc(50% - 3.75rem);
+    bottom: calc(-50% + 4.25rem);
+  }
+  .skills-section {
+    position: relative;
+  }
+  .skills-section::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -6rem;
+    top: 25rem;
+    @apply bg-dirtywhite dark:bg-shadow;
+    width: 13.5rem;
+    height: 3rem;
+    border-radius: 2rem;
+  }
+
+  .aboutme-header {
+    position: relative;
+    z-index: 1;
+  }
+
+  .aboutme-header::after {
+    content: "";
+    display: block;
+    z-index: -1;
+    position: absolute;
+    border-radius: 0.25rem;
+    background-color: #82bbff;
+    width: 5.5rem;
+    height: 1rem;
+    top: 1.25rem;
+    left: -0.5rem;
+  }
+
+  .profile-section {
+    position: relative;
+  }
+  .profile-section::after {
+    content: "";
+    width: 7.5rem;
+    height: 7.5rem;
+    border: 1.25rem solid #ea2678;
+    display: block;
+    border-radius: 100%;
+    right: -2.75rem;
+    top: -2rem;
+    position: absolute;
+  }
 }

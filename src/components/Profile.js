@@ -4,7 +4,7 @@ import { LanguageContext } from "../context/languageContext";
 const Profile = () => {
   const { siteData } = useContext(LanguageContext);
   return (
-    <div className="bg-silver dark:bg-darkgrey dark:text-[#FFFFFF] py-20">
+    <div className="bg-silver dark:bg-darkgrey dark:text-[#FFFFFF] py-20 profile-section">
       <div className="container flex flex-wrap">
         <h2 className="text-4xl font-medium w-full text-center pb-9">
           {siteData.profile.header}
@@ -31,7 +31,7 @@ const Profile = () => {
         </div>
         <div className="px-4 w-1/2">
           <div className="py-10 px-6">
-            <h5 className="text-2xl font-playfairDisplay text-coal dark:text-[#FFFFFF] pb-5">
+            <h5 className="aboutme-header text-2xl font-playfairDisplay text-coal dark:text-[#FFFFFF] pb-5">
               {siteData.profile.aboutMe.header}
             </h5>
             <p className="text-[18px] pb-6">

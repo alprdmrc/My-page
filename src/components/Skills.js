@@ -4,7 +4,7 @@ import { LanguageContext } from "../context/languageContext";
 const Skills = () => {
   const { siteData } = useContext(LanguageContext);
   return (
-    <div className="dark:bg-lightgrey">
+    <div className="dark:bg-lightgrey skills-section">
       <div className="container flex flex-col items-center py-20 ">
         <h2 className="text-5xl dark:text-silver font-medium">
           {siteData.skills.header}
