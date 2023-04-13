@@ -6,17 +6,23 @@
   .App {
     overflow: hidden;
   }
-
+  /* darkMode button */
   #dark-toggle:checked ~ .dot {
     transform: translateX(200%);
   }
-  #dark-toggle:checked ~ .dot::before {
+  #dark-toggle:checked ~ .dot::after {
     content: "";
-    width: 3px;
-    height: 3px;
-    color: black;
-    border-radius: 50%;
+    width: 0.75rem;
+    height: 0.75rem;
+    position: absolute;
+    top: calc(50% - 0.375rem);
+    left: -0.1rem;
+    border-radius: 100%;
+    display: block;
+    background-color: black;
   }
+
+  /* sayfa susleri */
   .intro-text {
     position: relative;
     z-index: 1;

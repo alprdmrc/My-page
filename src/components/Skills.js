@@ -12,7 +12,7 @@ const Skills = () => {
         <div className="flex gap-9 py-14">
           {siteData.skills.skills.map((skill, idx) => {
             return (
-              <div key={idx} className="flex flex-col items-center">
+              <div key={idx} className="flex flex-col items-center w-[120px]">
                 <img src={skill.logo} alt={skill.name} />
                 <h4 className="text-grey dark:text-dirtywhite text-2xl pt-2 font-medium uppercase">
                   {skill.name}
