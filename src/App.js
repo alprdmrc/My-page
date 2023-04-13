@@ -16,17 +16,19 @@ function App() {
   const [siteData, setSiteData] = useState(SITE_DATA_EN);
 
   useEffect(() => {
-    if (localStorage.getItem("darkMode")) {
+    if (localStorage.getItem("darkMode") === "true") {
       document.querySelector("html").classList.add("dark");
       setDarkMode(true);
-    } else {
+    } else if (localStorage.getItem("darkMode") === "false") {
       document.querySelector("html").classList.remove("dark");
       setDarkMode(false);
     }
     if (localStorage.getItem("language") === "tr") {
       setSiteData(SITE_DATA_TR);
-    } else {
+      setLanguage("tr");
+    } else if (localStorage.getItem("language") === "eng") {
       setSiteData(SITE_DATA_EN);
+      setLanguage("eng");
     }
   }, []);
 
