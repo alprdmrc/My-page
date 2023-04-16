@@ -6,6 +6,10 @@
   .App {
     overflow: hidden;
   }
+  .container {
+    @apply lg:p-16 md:p-8;
+  }
+
   /* darkMode button */
   #dark-toggle:checked ~ .dot {
     transform: translateX(200%);
@@ -37,13 +41,16 @@
     border-radius: 0.25rem;
     left: -1rem;
     top: 2.25rem;
+    @apply sm:top-[1.7rem] sm:h-[1.5rem];
     z-index: -1;
   }
   .top-bar {
     position: relative;
+    z-index: 1;
   }
 
   .top-bar::after {
+    z-index: -1;
     content: "";
     display: block;
     position: absolute;
@@ -60,7 +67,7 @@
     display: block;
     position: absolute;
     right: -6rem;
-    top: 32rem;
+    top: 30rem;
     background-color: #ea2678;
     width: 13.5rem;
     height: 4rem;

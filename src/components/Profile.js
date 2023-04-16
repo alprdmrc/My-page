@@ -5,21 +5,24 @@ const Profile = () => {
   const { siteData } = useContext(LanguageContext);
   return (
     <div className="bg-silver dark:bg-darkgrey dark:text-[#FFFFFF] py-20 profile-section">
-      <div className="container flex flex-wrap">
+      <div className="container flex md:flex-col flex-wrap">
         <h2 className="text-4xl font-medium w-full text-center pb-9">
           {siteData.profile.header}
         </h2>
-        <div className="px-4 w-1/2">
-          <div className="p-10 bg-[#FFFFFF] dark:bg-shadow rounded-[12px] shadow-[9px_9px_#52525280]">
+        <div className="px-4 w-1/2 md:w-full sm:p-0">
+          <div className="sm:p-4 p-10 bg-[#FFFFFF] dark:bg-shadow rounded-[12px] shadow-[9px_9px_#52525280]">
             <h5 className="text-2xl font-playfairDisplay text-pink pb-8">
               {siteData.profile.basicInfo.header}
             </h5>
 
-            <table className="table-fixed text-[18px]">
+            <table className="table-fixed text-[18px] sm:text-[16px]">
               <tbody className="align-top">
-                {siteData.profile.basicInfo.info.map((info) => {
+                {siteData.profile.basicInfo.info.map((info, idx) => {
                   return (
-                    <tr className="border-[#FFFFFF] dark:border-shadow border-b-8">
+                    <tr
+                      key={idx}
+                      className="border-[#FFFFFF] dark:border-shadow border-b-8"
+                    >
                       <td className="font-semibold w-2/5">{info[0]}</td>
                       <td>{info[1]}</td>
                     </tr>
@@ -29,7 +32,7 @@ const Profile = () => {
             </table>
           </div>
         </div>
-        <div className="px-4 w-1/2">
+        <div className="px-4 w-1/2 md:w-full sm:p-0">
           <div className="py-10 px-6">
             <h5 className="aboutme-header text-2xl font-playfairDisplay text-coal dark:text-[#FFFFFF] pb-5">
               {siteData.profile.aboutMe.header}

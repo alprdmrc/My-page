@@ -11,7 +11,7 @@ export const SITE_DATA_EN = {
     intro:
       "I’m Alper. I’m a full-stack developer. I can craft solid and scalable frontend products. Let’s meet!",
     current:
-      "Currently {Freelancing} for {UX, UI, & Web Design} Project. Invite me to join your team -> {alprdmrc20@gmail.com}",
+      "Currently {Freelancing} for {UX, UI, & Web Design} Projects. Invite me to join your team -> {alprdmrc20@gmail.com}",
   },
   skills: {
     header: "Skills",
@@ -87,7 +87,7 @@ export const SITE_DATA_TR = {
   intro: {
     greeting: "Merhaba! 👋",
     intro:
-      "Ben Alper. Ben bir full-stack geliştiriciyim. Ölçeklenebilir ve sağlam front-end ürünleri üretebilirim. Haydi tanışalım!",
+      "Ben Alper. Full-stack geliştiriciyim. Ölçeklenebilir ve sağlam front-end ürünleri üretebilirim. Haydi tanışalım!",
     current:
       "Şu anda {UX, UI, & Web Dizayn} Projeleri için {Serbest} Çalışıyorum. Beni ekibine katılmaya davet et -> {alprdmrc20@gmail.com}",
   },

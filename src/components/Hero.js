@@ -9,9 +9,9 @@ const Hero = ({ darkMode, handleDarkMode }) => {
 
   return (
     <div className="bg-silver dark:bg-darkgrey hero-section relative">
-      <div className="container flex flex-wrap pb-24">
-        <div className="top-bar py-16 px-10 w-full">
-          <div className="justify-end flex flex-row items-center">
+      <div className="container md:justify-center md:flex-col flex flex-wrap pb-24">
+        <div className="top-bar py-16 px-10 w-full sm:p-8">
+          <div className="justify-end sm:justify-center flex flex-row items-center">
             <div className="flex flex-row justify-between toggle">
               <label
                 htmlFor="dark-toggle"
@@ -46,18 +46,18 @@ const Hero = ({ darkMode, handleDarkMode }) => {
             </div>
           </div>
         </div>
-        <div className="w-3/5 dark:text-[#FFFFFF]">
+        <div className="basis-3/5 sm:w-[100%] dark:text-[#FFFFFF] sm:text-center">
           <p className="text-3xl pb-4">{siteData.intro.greeting}</p>
-          <p className="intro-text text-[2.5rem] font-medium pr-14 pb-14">
+          <p className="intro-text text-[2.5rem] font-medium pr-14 pb-14 sm:pr-0 sm:text-[2rem] ">
             {siteData.intro.intro}
           </p>
-          <div className="text-3xl dark:text-dirtywhite flex gap-2 pb-5">
+          <div className="text-3xl dark:text-dirtywhite flex gap-2 pb-5 sm:justify-center">
             <FaLinkedinIn />
             <AiFillGithub />
           </div>
           {/* UUPS, set color of some words of jsx text with -dangerous thing- */}
           <p
-            className="pr-40 current-text"
+            className="pr-40 current-text sm:p-0"
             dangerouslySetInnerHTML={{
               __html: siteData.intro.current.replace(
                 /{(.*?)}/g,
@@ -66,7 +66,7 @@ const Hero = ({ darkMode, handleDarkMode }) => {
             }}
           ></p>
         </div>
-        <div className="profile-img w-2/5">
+        <div className="profile-img basis-2/5">
           <img
             className="mx-auto my-12 w-[341px] h-[341px] object-cover rounded-[22px] shadow-[-20px_-20px_#E92577]"
             src={profile}
